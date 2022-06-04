@@ -1,8 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 * {
-   margin: 0;
-   padding: 0;
+ text-decoration: none;
+ padding: 0;
+ margin: 0;
 }
 
 body {
-   background: #1F2227;
+ background: #1F2227;
+ align-content: center;
+ font-family: 'Inconsolata', monospace;
+}
+
+.warp {
+ height: 768px;
+ padding: 20px;
+}
+
+.main {
+ width: 320px;
+ background: rgba(57,64,70, .3);
+ margin: 0 auto;
+ border-radius: 5px;
+}
+
+.main img{
+ width: 100px;
+ height: 100px;
+ color: #B1F000;
+}
+
+.title {
+ display: inline-block;
+ text-align: center;
+ color: white;
+}
+
+.content {
+ width: 310px;
+}
+
+.content div {
+ height: 50px;
+ width: 100%;
+ margin: 15px 0px 10px 5px;
+}
+
+.content .check input[type=checkbox] {
+ width: 15px;
+ height: 15px;
+}
+
+.check {
+ padding: 10px 0 0 5px;
+}
+
+.content input {
+ width: 97%;
+ background: #394046;
+ color: #B1F000;
+ padding: 5px;
+ height: 30px;
+ outline: none;
+ border: none;
+ border-radius: 8px;
+}
+
+.content label {
+ color: white;
 }
