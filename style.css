@@ -1,71 +1,260 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
-* {
- text-decoration: none;
- padding: 0;
- margin: 0;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 body {
- background: #1F2227;
- align-content: center;
  font-family: 'Inconsolata', monospace;
 }
 
 .warp {
  height: 768px;
- padding: 20px;
+ background: #1F2227;
+ padding: 78px 0 0 0;
 }
 
 .main {
- width: 320px;
- background: rgba(57,64,70, .3);
+ background-color: rgba(57,64,70, .36);
+ border-radius: 8px;
+ width: 305px;
  margin: 0 auto;
- border-radius: 5px;
+ padding: 15px;
 }
 
-.main img{
- width: 100px;
- height: 100px;
- color: #B1F000;
+.main img {
+ display: inline-block;
+ width: 80px;
+ height: 80px;
 }
 
 .title {
  display: inline-block;
  text-align: center;
+ font-weight: bold;
+ margin: 0 0 10px 0;
+}
+
+.title h3 {
+ font-size: 24px;
+ color: white;
+}
+
+.title h6 {
+ font-size: 12px;
  color: white;
 }
 
 .content {
- width: 310px;
+ margin: 0 auto;
+ padding: 5px;
 }
 
-.content div {
+.invite, .name, .mail, .password, .cpassword {
  height: 50px;
- width: 100%;
- margin: 15px 0px 10px 5px;
+ width: 280px;
+ margin: 0 auto;
 }
 
-.content .check input[type=checkbox] {
- width: 15px;
- height: 15px;
+.invite label {
+ color: white;
+}
+
+.invite input {
+ border: none;
+ border-radius: 5px;
+ outline: none;
+ background: #1F2227;
+ height: 25px;
+ width: 280px;
+ padding: 0 5px 0 5px;
+ color: #B1F000;
+}
+
+.invite input:hover {
+ border: 1px solid #B1F000;
+}
+
+.name label {
+ color: white;
+}
+
+.name input {
+ border: none;
+ border-radius: 5px;
+ outline: none;
+ background: #394046;
+ height: 25px;
+ width: 100%;
+ padding: 0 5px 0 5px;
+ color: #B1F000;
+}
+
+.name input:hover {
+ border: 1px solid #B1F000;
+}
+
+.mail label {
+ color: white;
+}
+
+.mail input {
+ border: none;
+ border-radius: 5px;
+ outline: none;
+ background: #394046;
+ height: 25px;
+ width: 100%;
+ padding: 0 5px 0 5px;
+ color: #B1F000;
+}
+
+.mail input:hover {
+ border: 1px solid #B1F000;
+}
+
+.password label {
+ color: white;
+}
+
+.password input {
+ border: none;
+ border-radius: 5px;
+ outline: none;
+ background: #394046;
+ height: 25px;
+ width: 100%;
+ padding: 0 5px 0 5px;
+ color: #B1F000;
+}
+
+.password input:hover {
+ border: 1px solid #B1F000;
+}
+
+.cpassword label {
+ color: white;
+}
+
+.cpassword input {
+ border: none;
+ border-radius: 5px;
+ outline: none;
+ background: #394046;
+ height: 25px;
+ width: 100%;
+ padding: 0 5px 0 5px;
+ color: #B1F000;
+}
+
+.cpassword input:hover {
+ border: 1px solid #B1F000;
 }
 
 .check {
- padding: 10px 0 0 5px;
+ width: 280px;
+ height: 60px;
+ margin: 0 auto;
+ padding: 0 25px 0 0;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
 }
 
-.content input {
- width: 97%;
- background: #394046;
- color: #B1F000;
- padding: 5px;
- height: 30px;
- outline: none;
- border: none;
- border-radius: 8px;
+.check input[type="checkbox"] {
+ appearance: none;
+ -webkit-appearance: none;
+ height: 15px;
+ width: 15px;
+ border: 1px solid #B1F000;
+ background: none;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
-.content label {
+.check input[type="checkbox"]:after {
+ font-family: 'Inconsolata', monospace;
+ font-weight: bold;
+ content: "";
+ font-size: 5px;
  color: white;
+ display: none;
+}
+
+.check input[type="checkbox"]:hover {
+ border: 1px solid #B1F000;
+}
+
+.check input[type="checkbox"]:checked {
+ background: #B1F000;
+}
+
+.check input[type="checkbox"]:checked:after {
+ display: block;
+}
+
+.check label {
+ color: white;
+}
+
+.check label a {
+ text-decoration: none;
+ color: #B1F000;
+}
+
+.submit {
+ height: 50px;
+ width: 280px;
+}
+
+.submit button {
+ float: right;
+ background: none;
+ height: 20px;
+ border: 1px solid #B1F000;
+ border-radius: 2px;
+ color: #B1F000;
+ margin: 30px 0 0 0;
 }
